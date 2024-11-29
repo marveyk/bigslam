@@ -1,0 +1,6 @@
+require_once '/path/to/vendor/autoload.php';
+
+$loader = new \Twig\Loader\FilesystemLoader('templates');
+$twig = new \Twig\Environment($loader);
+
+echo $twig->render('index.twig', ['title' => 'Home Page', 'page_title' => 'Welcome!', 'items' => ['Item 1', 'Item 2', 'Item 3']]);
